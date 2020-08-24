@@ -1,0 +1,139 @@
+/* pages/login/login.wxss */
+.login-box{
+  width: 100%;
+  height: 100vh;
+}
+.login-box .png{
+
+  position: absolute;
+  z-index: 1;
+}
+.login-box .png-0{
+  position: absolute;
+  z-index: -1;
+}
+
+.login-box .bg-blur{
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:cover;
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter:blur(4px);
+}
+.login-box .bgShade{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.login-box .logo{
+  position: absolute;
+  z-index: 5;
+  height: 35%;
+  width: 100%;
+  text-align: center;
+}
+.login-box .logo .icon{
+  display: block;
+  width: 200rpx;
+  height: 200rpx;
+  margin: 0 auto;
+  margin-top: 25%;
+  margin-bottom: 50rpx;
+
+}
+.login-box .logo .title{
+  display: block;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+
+ 
+  font-size: 28rpx;
+  font-weight: bold;
+  letter-spacing:5rpx;
+  background: linear-gradient(to bottom, #c9fbb7, #5FDED0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.login-box .form{
+  position: absolute;
+  top: 35%;
+  left: 15%;
+  right: 15%;
+  z-index: 5;
+  height: 35%;
+  width: 70%;
+  text-align: center;
+}
+.login-box .form .van-cell__left-icon-wrap{
+  color: #fff;
+}
+.login-box .form .cell-index--van-cell{
+  background-color:rgba(0, 0, 0, 0) ;
+}
+.login-box .form .van-field__input{
+  text-align: center;
+  font-size: 25rpx;
+  color:var(--field-input-text-color,#fff);
+}
+.login-box .form .formName{
+  margin-top: 40rpx;
+}
+.login-box .form .formPW{
+  margin-top: 30rpx;
+}
+.login-box .form .formButten{
+  width: 100%;
+  margin-top: 40rpx;
+}
+.login-box .form .formButten button{
+  width: 100%;
+}
+.login-box .form .formOther{
+  margin-top: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.login-box .form .formOther text{
+  font-size: 25rpx;
+  letter-spacing:3rpx;
+}
+.login-box .form .formOther .forgetPW{
+  color: #fff;
+}
+.login-box .form .formOther .register{
+  color: aqua;
+}
+.login-box .otherLog{
+  position: absolute;
+  z-index: 5;
+  top: 70%;
+  height: 30%;
+  width: 100%;
+  text-align: center;
+}
+.login-box .otherLog .f-g .van-divider{
+  padding: 0 20rpx;
+}
+.login-box .otherLog .f-g .van-divider{
+  padding: 0 20rpx;
+}
+.login-box .otherLog .otherIcon{
+  margin-top: 40rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 40rpx;
+}
+.login-box .otherLog .otherIcon image{
+  width: 100rpx ;
+  height: 100rpx ;
+}
