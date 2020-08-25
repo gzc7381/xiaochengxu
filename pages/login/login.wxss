@@ -68,7 +68,7 @@
   left: 15%;
   right: 15%;
   z-index: 5;
-  height: 35%;
+  height: 40%;
   width: 70%;
   text-align: center;
 }
@@ -115,8 +115,8 @@
 .login-box .otherLog{
   position: absolute;
   z-index: 5;
-  top: 70%;
-  height: 30%;
+  top: 75%;
+  height: 25%;
   width: 100%;
   text-align: center;
 }
@@ -136,4 +136,41 @@
 .login-box .otherLog .otherIcon image{
   width: 100rpx ;
   height: 100rpx ;
+}
+
+.login-box .form2 {
+  position: absolute;
+  top: 35%;
+  left: 15%;
+  right: 15%;
+  z-index: 5;
+  height: 40%;
+  width: 70%;
+  text-align: center;
+}
+
+.login-box .form2 .van-cell__left-icon-wrap {
+  color: #fff;
+}
+
+.login-box .form2 .cell-index--van-cell {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.login-box .form2 .van-field__input {
+  text-align: center;
+  font-size: 25rpx;
+  color: var(--field-input-text-color, #fff);
+}
+
+.login-box .form2 .formName{
+  margin-top: 30rpx;
+}
+.login-box .form2 .formButten {
+  width: 100%;
+  margin-top: 40rpx;
+}
+
+.login-box .form2 .formButten button {
+  width: 100%;
 }

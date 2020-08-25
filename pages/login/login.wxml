@@ -9,22 +9,41 @@
     <image src='/images/icon.png' class='icon'></image>
     <text class="title">每天进步一点点</text>
   </view>
-  <!-- form -->
-  <view class="form">
+  <!-- 登录form -->
+  <view class="form" style="display:none;">
     <view class="formName">
-      <van-field v-model="userName" placeholder="{{userPlaceholder}}" center clearable autofocus left-icon="manager-o" bindfocus='userFocus' bindblur='userBlur'></van-field>
+      <van-field  value="{{userName}}" placeholder="{{userPlaceholder}}" center clearable autofocus left-icon="manager-o" bindfocus='userFocus' bindblur='userBlur' bindchange="userChange"></van-field>
     </view>
     <view class="formPW">
-      <van-field v-model="passName" placeholder="{{passPlaceholder}}" center clearable autofocus left-icon="bag-o" bindfocus='passFocus' bindblur='passBlur' type='password'></van-field>
+      <van-field wx-model="passName" placeholder="{{passPlaceholder}}" center clearable autofocus left-icon="bag-o" bindfocus='passFocus' bindblur='passBlur' type='password' bindchange="pwdChange"></van-field>
     </view>
     <view class="formButten">
-      <van-button  color="#8FDCB5" size="normal"  round>登   录</van-button>
+      <van-button  color="#8FDCB5" size="normal"  round bindtap="dologin">登   录</van-button>
     </view>
     <view class="formOther">
       <text class='forgetPW'>忘记密码？</text>
       <text class="register">立即注册！</text>
     </view>
 
+  </view>
+  <!-- 注册form -->
+  <view class="form2">
+    <view class="formName">
+      <van-field placeholder="{{regUserPlaceholder}}" center clearable autofocus left-icon="manager-o" bindfocus='regUserFocus' bindblur='regUserBlur' bindchange="regUserChange"></van-field>
+    </view>
+        <view class="verify">
+      <van-field placeholder="{{regUserPlaceholder}}" center clearable autofocus left-icon="manager-o" bindfocus='regUserFocus' bindblur='regUserBlur' bindchange="regUserChange"></van-field>
+    </view>
+    <view class="formPW">
+      <van-field placeholder="{{regPassPlaceholder}}" center clearable autofocus left-icon="bag-o" bindfocus='regPassFocus' bindblur='regPassBlur' type='password' bindchange="regPwdChange"></van-field>
+    </view>
+        <view class="formPWAgn">
+      <van-field placeholder="{{regPassPlaceholderAgn}}" center clearable autofocus left-icon="bag-o" bindfocus='regPassFocusAgn' bindblur='regPassBlurAgn' type='password' bindchange="regPwdChangeAgn"></van-field>
+    </view>
+    <view class="formButten">
+      <van-button  color="#EEE671" size="normal"  round bindtap="dologin">注   册</van-button>
+    </view>
+    
   </view>
   <!-- 其他登录方式 -->
   <view class="otherLog">
@@ -37,4 +56,6 @@
       <image src="/images/wbLog.png"></image>
     </view>
   </view>
+  <van-toast id="van-toast" />
+  <van-notify id="van-notify" />
 </view>

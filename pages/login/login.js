@@ -1,19 +1,38 @@
 // pages/login/login.js
+import Toast from '../../miniprogram_npm/@vant/weapp/toast/toast';
+import Notify from '../../miniprogram_npm/@vant/weapp/notify/notify';
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    // 登录
     userName:'',
     userPlaceholder:'请输入用户账号',
     passName:'',
     passPlaceholder:'请输入用户密码',
+    // 注册
+    regUserName:'',
+    regUserPlaceholder: '请输入手机号',
+    regPassName:'',
+    regPassPlaceholder:'请输入6到18位密码',
+    regPassNameAgn:'',
+    regPassPlaceholderAgn:'请再次输入密码',
+    // 分割线
     vanDivider:{ color: '#FFF', borderColor: '#F00', padding: '0 16px' },
+
   },
   /**
    * 微信登陆小程序
    */
+  userChange:function(event){
+    this.data.userName=event.detail;
+  },
+  pwdChange:function(event){
+    this.data.passName=event.detail;
+  },
   loginByWX:function(){
     wx.login({
       success (res) {
@@ -66,6 +85,46 @@ Page({
         passPlaceholder:'请输入用户账号'
       })
     }
+  },
+  dologin:function(){
+    if(this.data.userName===''){
+      Toast.fail('请输入账号');
+      return;
+    }else if(this.data.passName===''){
+      Toast.fail('请输入密码');
+      return;
+    }
+    wx.request({
+      url: 'http://127.0.0.1:888/login',
+      data:{
+        phone:this.data.userName,
+        upwd:this.data.passName
+      },
+      success:res=>{
+        if(res.data.code==-1){
+          console.log(res)
+          // Toast.fail(res.data.msg);
+          // Notify("\n\n"+res.data.msg+"\n");
+          Notify({
+            message:"\n\n"+res.data.msg+"\n",
+            color: '#ad0000',
+            background: '#ffe1e1',
+            duration: 2500,
+          });
+          return;
+        }else if(res.data.code==1){
+          // Toast.fail(res.data.msg);
+          Toast.fail({
+            type:'success',
+            message:res.data.msg,
+            duration:2000
+          });
+        }
+      },
+      fail:err=>{
+        console.log(err)
+      }
+    })
   },
   /**
    * 生命周期函数--监听页面加载

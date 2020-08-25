@@ -7,6 +7,10 @@
   "window":{
     "navigationStyle":"custom"
   },
+  "usingComponents": {
+    "van-toast":"/miniprogram_npm/@vant/weapp/toast/index",
+    "van-notify":"/miniprogram_npm/@vant/weapp/notify/index"
+  },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
 }
