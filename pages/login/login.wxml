@@ -10,38 +10,40 @@
     <text class="title">每天进步一点点</text>
   </view>
   <!-- 登录form -->
-  <view class="form" style="display:none;">
+  <view class="form  animated  {{isLogin ? 'bounceInRight' :  'disNone  bounceOutLeft'}}">
     <view class="formName">
-      <van-field  value="{{userName}}" placeholder="{{userPlaceholder}}" center clearable autofocus left-icon="manager-o" bindfocus='userFocus' bindblur='userBlur' bindchange="userChange"></van-field>
+      <van-field    model:value="{{userName}}" placeholder="{{userPlaceholder}}" center clearable autofocus left-icon="manager-o" bindfocus='userFocus' bindblur='userBlur' ></van-field>
     </view>
     <view class="formPW">
-      <van-field wx-model="passName" placeholder="{{passPlaceholder}}" center clearable autofocus left-icon="bag-o" bindfocus='passFocus' bindblur='passBlur' type='password' bindchange="pwdChange"></van-field>
+      <van-field  model:value="{{passName}}" placeholder="{{passPlaceholder}}" center clearable autofocus left-icon="bag-o" bindfocus='passFocus' bindblur='passBlur' type='password'></van-field>
     </view>
     <view class="formButten">
       <van-button  color="#8FDCB5" size="normal"  round bindtap="dologin">登   录</van-button>
     </view>
     <view class="formOther">
       <text class='forgetPW'>忘记密码？</text>
-      <text class="register">立即注册！</text>
+      <text class="register"  bindtap="goReg">立即注册！</text>
     </view>
 
   </view>
   <!-- 注册form -->
-  <view class="form2">
+  <view class="form2  animated {{isLogin ? 'disNone    bounceOutLeft' : 'bounceInRight'}}">
     <view class="formName">
-      <van-field placeholder="{{regUserPlaceholder}}" center clearable autofocus left-icon="manager-o" bindfocus='regUserFocus' bindblur='regUserBlur' bindchange="regUserChange"></van-field>
+      <van-field model:value="{{regUserName}}" placeholder="{{regUserPlaceholder}}" center clearable autofocus left-icon="manager-o" bindfocus='regUserFocus' bindblur='regUserBlur'> </van-field>
     </view>
-        <view class="verify">
-      <van-field placeholder="{{regUserPlaceholder}}" center clearable autofocus left-icon="manager-o" bindfocus='regUserFocus' bindblur='regUserBlur' bindchange="regUserChange"></van-field>
+    <view class="verify">
+      <van-field  model:value="{{regVerify}}" placeholder="{{regVerUserPlaceholder}}" center clearable autofocus left-icon="envelop-o" bindfocus='regVerUserFocus' bindblur='regVerUserBlur' >
+          <van-button  slot="button" size="small" type="primary" round bindtap='sendVerify'>{{verifyButtenText}}</van-button>
+      </van-field>
     </view>
     <view class="formPW">
-      <van-field placeholder="{{regPassPlaceholder}}" center clearable autofocus left-icon="bag-o" bindfocus='regPassFocus' bindblur='regPassBlur' type='password' bindchange="regPwdChange"></van-field>
+      <van-field  model:value="{{regPassName}}" placeholder="{{regPassPlaceholder}}" center clearable autofocus left-icon="bag-o" bindfocus='regPassFocus' bindblur='regPassBlur' type='password' ></van-field>
     </view>
         <view class="formPWAgn">
-      <van-field placeholder="{{regPassPlaceholderAgn}}" center clearable autofocus left-icon="bag-o" bindfocus='regPassFocusAgn' bindblur='regPassBlurAgn' type='password' bindchange="regPwdChangeAgn"></van-field>
+      <van-field  model:value="{{regPassNameAgn}}" placeholder="{{regPassPlaceholderAgn}}" center clearable autofocus left-icon="goods-collect-o" bindfocus='regPassFocusAgn' bindblur='regPassBlurAgn' type='password' ></van-field>
     </view>
     <view class="formButten">
-      <van-button  color="#EEE671" size="normal"  round bindtap="dologin">注   册</van-button>
+      <van-button  color="#EEE671" size="normal"  round bindtap="doReg">注   册</van-button>
     </view>
     
   </view>
@@ -55,6 +57,9 @@
       <image src="/images/QQLog.png"></image>
       <image src="/images/wbLog.png"></image>
     </view>
+  </view>
+  <view class="backLog  animated {{isLogin ? 'disNone    bounceOutLeft' : 'fadeInLeft'}}" style="top:{{topVal}}px" bindtap='goLogin'>
+    <image src='/images/back.png' style="height:{{heightVal}}px; width:{{heightVal+10}}px;"></image>
   </view>
   <van-toast id="van-toast" />
   <van-notify id="van-notify" />

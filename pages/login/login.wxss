@@ -174,3 +174,17 @@
 .login-box .form2 .formButten button {
   width: 100%;
 }
+.login-box .form2 .verify button{
+  width: 180rpx;
+  border-color: #fff;
+  background: rgba(0, 0, 0, 0);
+}
+.login-box .backLog{
+  position: absolute;
+  z-index: 5;
+  text-align: left;
+  padding: 5px 30rpx;
+}
+.login-box .backLog image{
+  
+}

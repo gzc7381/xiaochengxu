@@ -7,7 +7,9 @@
  *
  * Copyright (c) 2018 Daniel Eden
  */
-
+.disNone{
+  display: none;
+}
 
 
 @keyframes bounce {
