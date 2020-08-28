@@ -185,6 +185,4 @@
   text-align: left;
   padding: 5px 30rpx;
 }
-.login-box .backLog image{
-  
-}
+

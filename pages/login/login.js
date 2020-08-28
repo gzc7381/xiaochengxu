@@ -281,7 +281,6 @@ Page({
    */
   onReady: function () {
     let position= wx.getMenuButtonBoundingClientRect()
-    console.log(wx.getMenuButtonBoundingClientRect())
     this.setData({
       topVal: position.top,
       heightVal: position.height-10
