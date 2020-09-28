@@ -1,0 +1,21 @@
+<!--pages/indexone/indexone.wxml-->
+<!--首页tab内容-->
+<view class="indexone" >
+    <!-- 首页 -->
+    <!-- 搜索框 -->
+    <view class="header" hover-class="none" hover-stop-propagation="false">
+      <van-search model:value="{{ searchValue }}" placeholder="{{searchHolder}}" shape="round" style="top:{{sTop}}px;width:{{sWidth}}px;height:{{sHeight}}px;padding:0;" class="search" />
+    </view>
+    <!-- tab栏 -->
+    <van-tabs  swipeable active="{{ activeTab }}" bind:change="changeTab"  sticky  animated  border="false"  offset-top="100">
+      <van-tab title="标签1">内容1
+        <view style="height:1000px" hover-class="none" hover-stop-propagation="false">
+        </view>
+      </van-tab>
+      <van-tab title="标签2">内容2</van-tab>
+      <van-tab title="标签3">内容3</van-tab>
+      <van-tab title="标签4">内容4</van-tab>
+      <van-tab title="标签5">内容5</van-tab>
+    </van-tabs>
+    <!-- 内容列表 -->
+</view>

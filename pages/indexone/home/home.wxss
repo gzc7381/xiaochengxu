@@ -1,0 +1,26 @@
+.indexone {
+  width: 100%;
+  background: #fff;
+}
+.indexone .header {
+  height: 200rpx;
+  background: #fff;
+}
+.indexone .search {
+  z-index: 10;
+  position: fixed;
+  left: 10px;
+}
+.indexone .van-search {
+  padding: 0;
+}
+.indexone .screen-swiper {
+  min-height: 375rpx;
+}
+.indexone .screen-swiper image {
+  width: 100%;
+  display: block;
+  height: 100%;
+  margin: 0;
+  pointer-events: none;
+}

@@ -1,16 +1,17 @@
 {
-  "pages":[
+  "pages": [
     "pages/home/home",
-    "pages/index/index",
     "pages/login/login",
-    "pages/logs/logs"
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/indexone/home/home",
+    "pages/hotspot/home/home",
+    "pages/message/home/home",
+    "pages/user/home/home"
   ],
-  "window":{
-    "navigationStyle":"custom"
-  },
   "usingComponents": {
-    "van-toast":"/miniprogram_npm/@vant/weapp/toast/index",
-    "van-notify":"/miniprogram_npm/@vant/weapp/notify/index"
+    "van-toast": "/miniprogram_npm/@vant/weapp/toast/index",
+    "van-notify": "/miniprogram_npm/@vant/weapp/notify/index"
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

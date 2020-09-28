@@ -23,11 +23,5 @@
     <van-tabbar-item icon="manager">我的</van-tabbar-item>
   </van-tabbar>
   <!-- 首页 -->
-  <view class="index">
-    <!-- 搜索框 -->
-    <van-search  model:value="{{ searchValue }}" placeholder="{{searchHolder}}"  shape="round"  readonly/>
-    <!-- 轮播 -->
-    <!-- tab栏 -->
-    <!-- 内容列表 -->
-  </view>
+  <index-one sHeight="{{sHeight}}" sTop="{{sTop}}" sWidth="{{sWidth}}"></index-one>
 </view>

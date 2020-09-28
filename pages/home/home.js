@@ -6,6 +6,7 @@ Page({
    */
   data: {
     active: 0,
+    activeTab: 1,
     searchValue:'',
     searchHolder:'请输入关键词',
 
@@ -21,7 +22,38 @@ Page({
 
     sHeight:0,
     sTop:0,
-    sRight:0,
+    sWidth: 0,
+
+    swiperList: [{
+      id: 0,
+      type: 'image',
+      url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big84000.jpg'
+    }, {
+      id: 1,
+      type: 'image',
+      url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big84001.jpg',
+    }, {
+      id: 2,
+      type: 'image',
+      url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big39000.jpg'
+    }, {
+      id: 3,
+      type: 'image',
+      url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big10001.jpg'
+    }, {
+      id: 4,
+      type: 'image',
+      url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big25011.jpg'
+    }, {
+      id: 5,
+      type: 'image',
+      url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big21016.jpg'
+    }, {
+      id: 6,
+      type: 'image',
+      url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg'
+    }],
+    marginTop:0,
   },
 
   // event.detail 的值为当前选中项的索引
@@ -31,7 +63,12 @@ Page({
       active:event.detail
     })
   },
-
+  changeTab(event) {
+    wx.showToast({
+      title: `切换到标签 ${event.detail.index + 1}`,
+      icon: 'none'
+    });
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -44,12 +81,12 @@ Page({
    */
   onReady: function () {
     let position = wx.getMenuButtonBoundingClientRect()
-    console.log(position)
     this.setData({
       sHeight:position.height,
       sTop: position.top,
-      sRight: position.left-30
+      sWidth: position.left-20,
     })
+    console.log(this.data.sHeight, this.data.sTop, this.data.sWidth)
   },
 
   /**

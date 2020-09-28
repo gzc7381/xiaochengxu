@@ -1,7 +1,16 @@
 {
+  "window": {
+    "navigationStyle": "custom"
+  },
   "usingComponents": {
+    "user": "/pages/user/home/home",
+    "message": "/pages/message/home/home",
+    "hot-spot": "/pages/hotspot/home/home",
+    "index-one": "/pages/indexone/home/home",
     "van-tabbar": "/miniprogram_npm/@vant/weapp/tabbar/index",
     "van-tabbar-item": "/miniprogram_npm/@vant/weapp/tabbar-item/index",
-    "van-search": "/miniprogram_npm/@vant/weapp/search/index"
+    "van-search": "/miniprogram_npm/@vant/weapp/search/index",
+    "van-tab": "/miniprogram_npm/@vant/weapp/tab/index",
+    "van-tabs": "/miniprogram_npm/@vant/weapp/tabs/index"
   }
 }
